@@ -1,55 +1,28 @@
-# Open Execution Proof (OEP)
+# Open Execution Proof
 
-Open Execution Proof (OEP) is a protocol for **portable, cryptographically verifiable execution proofs**.
+Open Execution Proof is a public verification surface for execution receipts.
 
-Instead of trusting screenshots, copied terminal logs, or textual claims, OEP proofs allow anyone to independently verify that a command execution actually occurred.
+If an action happened, it can be proven.
 
-Execution claims become **verifiable artifacts**.
+## What is public
 
----
+- **Verifier** — public browser verification surface  
+- **Entrypoint** — https://openexecproof.github.io/
 
-## System Architecture
-command execution
-↓
-OEP proof generation
-↓
-portable proof artifact
-↓
-independent verification
-
----
-
-## Components
-
-### OEP-1
-
-Protocol specification defining:
-
-- execution proof schema  
-- execution identity derivation  
-- canonicalization rules  
-- verifier validation rules  
-
-### GUBAZ
-
-Reference runtime that **produces signed OEP proofs**.
-
-https://github.com/openexecproof/gubaz
-
-### Verifier
-
-Independent browser verifier that **validates execution proofs**.
-
-https://github.com/openexecproof/verify
-
----
-
-## Live Verifier
+## Live verifier
 
 https://openexecproof.github.io/verify/
 
----
+## What the system does
 
-## Example Proof
+Open Execution Proof allows an execution receipt to be:
 
-https://openexecproof.github.io/verify/?id=5a6c7a254d5cc40cf0a5ff7394fb1801dd989ce63e32044a5fd2c4674ebdeba7
+- independently verified  
+- cryptographically bound to an execution identity  
+- publicly resolved through a canonical proof corridor  
+
+## Scope
+
+This organization exposes the public verification layer.
+
+It does not claim that every producer runtime must be public.
